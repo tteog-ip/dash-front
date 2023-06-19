@@ -49,7 +49,7 @@ const LoginForm = () => {
         navigate('/dash_admin')
       }
       else if (idInputRef.current.value === 'ops') {
-        navigate('/dash_op')
+        navigate('/dash_ops')
       }
       alert('로그인 되었습니다! 환영합니다 :)');
     } else {
