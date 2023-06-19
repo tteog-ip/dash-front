@@ -11,11 +11,6 @@ const LoginForm = () => {
     // 로그인 요청 처리
   };
 
-  function getCookie(name) {
-  const cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
-  return cookieValue ? cookieValue.pop() : '';
-}
-
   const idInputRef = useRef();
   const pwInputRef = useRef();
   const [isAlertPopId, setIsAlertPopId] = useState(false);
@@ -59,17 +54,12 @@ const LoginForm = () => {
 
 
   const onSignIn = () => {
-    const csrftoken = getCookie('csrftoken');
     // django 로 로그인 데이터 전송
-    fetch('http://localhost:8000/user/login', {
+    fetch('http://localhost:8000/users/login', {
       method: 'POST',
-      headers: {
-      'Content-Type': 'application/json',
-      'X-CSRFToken': csrftoken
-    },
       body: JSON.stringify({
-        id: idInputRef.current.value,
-        pw: pwInputRef.current.value,
+        name: idInputRef.current.value,
+        password: pwInputRef.current.value,
       }),
     })
       .then(response => response.json())
