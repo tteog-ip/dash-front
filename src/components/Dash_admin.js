@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import { useNavigate } from 'react-router-dom';
 import $ from 'jquery'
 import { Bar } from 'react-chartjs-2';
 import { registerables, Chart as ChartJS } from 'chart.js';

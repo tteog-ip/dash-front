@@ -1,5 +1,7 @@
 import React from 'react';
-
+import ingress_logs from "../assets/images/Ingress_logs.png"
+import ingress_log2 from "../assets/images/Ingress_log2.png"
+import ingress_log3 from "../assets/images/Ingress_log3.png"
 class DashDev extends React.Component {
   render() {
     return (
@@ -70,6 +72,22 @@ class DashDev extends React.Component {
                     </div>
                     {/* end page header */}
                 </div>
+
+                {/* start kibana dashboard */}
+                <a href="https://search-efk-health-oalyovqxak4gh755rn4oddc5ou.ap-northeast-2.es.amazonaws.com/_plugin/kibana/app/dashboards?security_tenant=global#/view/1b8ad5e0-1ca1-11ee-a8bb-416788f00b3e?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'0707%20dashboard%20complete',viewMode:view)"
+                    style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    Kibana Dashboard 바로가기 링크<br/><br/><br/>
+                </a>
+                <img src={ingress_logs} width="1500px"/>
+                <img src={ingress_log2} width="1500px"/>
+                <img src={ingress_log3} width="1500px"/>
+                {/*
+                <iframe src="https://search-efk-health-oalyovqxak4gh755rn4oddc5ou.ap-northeast-2.es.amazonaws.com/_plugin/kibana/app/dashboards?security_tenant=global#/view/1b8ad5e0-1ca1-11ee-a8bb-416788f00b3e?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'0707%20dashboard%20complete',viewMode:view)"
+                        frameborder="0"
+                        height="1000px"
+                        width="100%"
+                        ></iframe> */}
+                {/* end kibana dashboard */}
 
                 <div className="footer">
                     <div className="container-fluid">
