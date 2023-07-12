@@ -55,7 +55,7 @@ const LoginForm = () => {
 
   const onSignIn = () => {
     // django 로 로그인 데이터 전송
-    fetch('http://localhost:8000/users/login', {
+    fetch('http://dash.tteogip.com/users/login', {
       method: 'POST',
       body: JSON.stringify({
         name: idInputRef.current.value,
