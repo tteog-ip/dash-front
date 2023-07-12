@@ -6,7 +6,6 @@ RUN chmod +x node_modules/.bin/react-scripts
 RUN npm run build
 FROM nginx:latest
 RUN rm -rf /usr/share/nginx/html/index.html
-COPY --from=build /dash-front/build/ /usr/share/nginx/html/
-COPY --from=build /dash-front/.env /usr/share/nginx/html/
+ADD build /usr/share/nginx/html/
 RUN rm -rf /etc/nginx/sites-available/default
-COPY default /etc/nginx/sites-available/default
+ADD default /etc/nginx/sites-availabel/default
