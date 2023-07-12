@@ -41,7 +41,7 @@ pipeline {
                   sh 'git add -u'
                   sh 'git commit -m "Update Image Tag - v$BuildNumber"'
                   withCredentials([gitUsernamePassword(credentialsId: 'github-token-cykim', gitToolName: 'Default')]) {
-                      sh 'git push origin master'
+                      sh 'git push origin main'
                   }
                 }
             }
