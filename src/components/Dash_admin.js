@@ -49,7 +49,7 @@ const DashAdmin = () => {
     }, []);
 
     const fetchDailyData = async() => {
-        const response = await fetch('http://localhost:8000/pricing/today/');
+        const response = await fetch('http://dash.tteogip.com/pricing/today/');
         const result = await response.json();
 
         // 일주일 치 날짜&요금 저장
@@ -81,7 +81,7 @@ const DashAdmin = () => {
     }
 
     const fetchMonthlyData = async() => {
-        const response = await fetch('http://localhost:8000/pricing/month/');
+        const response = await fetch('http://dash.tteogip.com/pricing/month/');
         const result = await response.json();
 
         // 이번달 예상 요금
@@ -111,7 +111,7 @@ const DashAdmin = () => {
     }
 
     const fetchResourceData = async() => {
-        const response = await fetch('http://localhost:8000/pricing/resource/');
+        const response = await fetch('http://dash.tteogip.com/pricing/resource/');
         const result = await response.json();
 
         // 비용 내림차순 정렬
