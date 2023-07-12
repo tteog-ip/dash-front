@@ -35,7 +35,7 @@ pipeline {
         
         stage('Manifest Update'){
             steps{
-                git branch: 'master', url: 'https://github.com/tteog-ip/dash-argocd'
+                git branch: 'main', url: 'https://github.com/tteog-ip/dash-argocd'
                 dir('front') {
                   sh 'sed -i "s/image:.*$/image: 728156710202.dkr.ecr.ap-northeast-2.amazonaws.com\\/dash-front:v$BuildNumber/g" deployment.yaml'
                   sh 'git add -u'
